@@ -4,13 +4,16 @@
 [ext_resource type="Script" uid="uid://d2r2vwlsho5md" path="res://rigid_body_2d_2.gd" id="1_xr0ua"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8cre8"]
-size = Vector2(92, 259)
+size = Vector2(93, 259)
 
 [node name="RigidBody2D2" type="RigidBody2D" unique_id=193630194]
+collision_layer = 2
+contact_monitor = true
+max_contacts_reported = 2
 script = ExtResource("1_xr0ua")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=725574164]
-position = Vector2(2, -38.499985)
+position = Vector2(2.5, -38.499985)
 scale = Vector2(0.99999994, 0.99999994)
 shape = SubResource("RectangleShape2D_8cre8")
 
@@ -19,5 +22,3 @@ z_index = 5
 position = Vector2(2, -32.999996)
 scale = Vector2(1.2676057, 1.6626507)
 texture = ExtResource("1_brn40")
-
-[connection signal="body_entered" from="." to="." method="_on_body_entered"]
