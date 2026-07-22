@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://c10rax251r6un"]
+
+[ext_resource type="Script" uid="uid://cq0bqwuay5adt" path="res://rigid_body_2d.gd" id="1_jiowd"]
+[ext_resource type="Texture2D" uid="uid://b3xnv4rf6i721" path="res://Screenshot_2026-07-22_10-53-28.png" id="1_wltir"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fwou7"]
+size = Vector2(63.00002, 201)
+
+[node name="RigidBody2D" type="RigidBody2D" unique_id=346535021]
+script = ExtResource("1_jiowd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=381892106]
+position = Vector2(21.499985, 7.5)
+scale = Vector2(0.9999997, 1)
+shape = SubResource("RectangleShape2D_fwou7")
+
+[node name="Screenshot20260722105328" type="Sprite2D" parent="." unique_id=1839129093]
+z_index = 1
+position = Vector2(29.999992, 14.999998)
+scale = Vector2(2.0064096, 1.7796609)
+texture = ExtResource("1_wltir")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
