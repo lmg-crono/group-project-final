@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://c183280h431bg"]
+
+[ext_resource type="Script" uid="uid://b4pf02bee35nt" path="res://enemy.gd" id="1_7k104"]
+[ext_resource type="PackedScene" uid="uid://dy4hlvu4lw7qg" path="res://area_enemy.tscn" id="2_4gyqm"]
+[ext_resource type="Texture2D" uid="uid://blsvgqsmgcj33" path="res://1000003607-removebg-preview.png" id="3_qi2p4"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_boomn"]
+radius = 70.34913
+
+[node name="Physics Enemy" type="CharacterBody2D" unique_id=1685907076]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("1_7k104")
+
+[node name="Enemy" parent="." unique_id=487474290 instance=ExtResource("2_4gyqm")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1392134776]
+shape = SubResource("CircleShape2D_boomn")
+
+[node name="RayCast2D" type="RayCast2D" parent="." unique_id=773260247]
+target_position = Vector2(131, 0)
+collision_mask = 2
+
+[node name="1000003607RemovebgPreview" type="Sprite2D" parent="." unique_id=1806600018]
+position = Vector2(2, -7)
+scale = Vector2(0.6726328, 0.5)
+texture = ExtResource("3_qi2p4")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1589618149]
