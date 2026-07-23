@@ -41,7 +41,7 @@ size = Vector2(2536, 42)
 size = Vector2(23, 548)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oyan1"]
-size = Vector2(851, 30.5)
+size = Vector2(851, 74.25)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l7l66"]
 size = Vector2(1967.5, 69)
@@ -196,7 +196,7 @@ speed = 3
 
 [node name="CharacterBody2D" parent="." unique_id=1230144333 instance=ExtResource("2_0e48y")]
 z_index = 8
-position = Vector2(702, -708)
+position = Vector2(219, -209)
 
 [node name="Fall Detector" type="Area2D" parent="." unique_id=89915164]
 position = Vector2(52, 532)
@@ -269,9 +269,8 @@ shape = SubResource("RectangleShape2D_fqmqj")
 [node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=400795491]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=331697392]
-position = Vector2(54, -112)
+position = Vector2(78, -90.125)
 shape = SubResource("RectangleShape2D_oyan1")
-one_way_collision = true
 
 [node name="StaticBody2D3" type="StaticBody2D" parent="." unique_id=1886326467]
 
@@ -297,7 +296,7 @@ position = Vector2(1081, -278)
 shape = SubResource("RectangleShape2D_0arap")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4" unique_id=1521572902]
-position = Vector2(-313, -114)
+position = Vector2(-455, -266)
 shape = SubResource("RectangleShape2D_0arap")
 
 [node name="StaticBody2D5" type="StaticBody2D" parent="." unique_id=728103113]
@@ -308,7 +307,7 @@ rotation = -0.116937056
 shape = SubResource("RectangleShape2D_gjg0o")
 
 [node name="Block body 1" parent="." unique_id=193630194 instance=ExtResource("13_0h7mo")]
-position = Vector2(-70, -235)
+position = Vector2(-6, -232)
 script = null
 
 [node name="StaticBody2D6" type="StaticBody2D" parent="." unique_id=255279753]
@@ -381,8 +380,9 @@ scale = Vector2(2.429061, 10.050709)
 texture = ExtResource("4_0h7mo")
 
 [node name="Background void" type="Sprite2D" parent="." unique_id=603306445]
+visible = false
 z_index = -20
-position = Vector2(358.49976, 98.99994)
+position = Vector2(479.00003, 336)
 scale = Vector2(176.02222, 42.814816)
 texture = ExtResource("4_0h7mo")
 
@@ -467,7 +467,7 @@ texture = ExtResource("18_k73cj")
 
 [node name="Woodplatform8" type="Sprite2D" parent="." unique_id=504944684]
 z_index = 1
-position = Vector2(20.687504, -88)
+position = Vector2(47, -88)
 scale = Vector2(1.9910417, 0.3137553)
 texture = ExtResource("18_k73cj")
 
