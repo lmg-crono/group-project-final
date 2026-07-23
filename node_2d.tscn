@@ -363,7 +363,7 @@ scale = Vector2(23.025003, 3.807694)
 texture = ExtResource("16_flf07")
 
 [node name="win" type="Area2D" parent="." unique_id=212417344]
-position = Vector2(329, 285)
+position = Vector2(-2274, 227)
 script = ExtResource("17_flf07")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="win" unique_id=1292940543]
