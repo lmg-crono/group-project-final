@@ -19,6 +19,7 @@
 [ext_resource type="Texture2D" uid="uid://b3d4pxlgbw7o2" path="res://Screenshot_2026-07-22_15-10-51.png" id="16_ta5nu"]
 [ext_resource type="Script" uid="uid://efse7p3qdha5" path="res://win.gd" id="17_flf07"]
 [ext_resource type="Texture2D" uid="uid://5kvqm48ed324" path="res://Character anims/Woodplatform.png" id="18_k73cj"]
+[ext_resource type="PackedScene" uid="uid://bg2ciqpmltnwy" path="res://woodplatform_5.tscn" id="19_7vxoj"]
 [ext_resource type="PackedScene" uid="uid://dy4hlvu4lw7qg" path="res://area_enemy.tscn" id="20_fs4d3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fwou7"]
@@ -68,6 +69,9 @@ size = Vector2(104, 233)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r2na5"]
 size = Vector2(1898.5, 137)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0hfnm"]
+size = Vector2(214.59578, 25.82904)
 
 [node name="Main" type="Node2D" unique_id=242556052]
 
@@ -427,10 +431,8 @@ position = Vector2(-284.5, -325.5001)
 scale = Vector2(0.16166663, 2.465)
 texture = ExtResource("18_k73cj")
 
-[node name="Woodplatform5" type="Sprite2D" parent="." unique_id=1232345517]
+[node name="Woodplatform5" parent="." unique_id=250245965 instance=ExtResource("19_7vxoj")]
 position = Vector2(-901.99994, -666)
-scale = Vector2(0.15986666, 2.3506298)
-texture = ExtResource("18_k73cj")
 
 [node name="Woodplatform2" type="Sprite2D" parent="." unique_id=1328241755]
 z_index = 1
@@ -499,6 +501,19 @@ one_way_collision_direction = Vector2(-0.9416097, 0.33670646)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D11" unique_id=1918062019]
 position = Vector2(41.75, -897)
 shape = SubResource("RectangleShape2D_r2na5")
+
+[node name="Woodplatform12" parent="." unique_id=935528850 instance=ExtResource("19_7vxoj")]
+position = Vector2(725, -17)
+rotation = 0.6382086
+scale = Vector2(-0.06475452, -1.3146749)
+
+[node name="StaticBody2D12" type="StaticBody2D" parent="." unique_id=1912937763]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D12" unique_id=279454548]
+position = Vector2(731, -28.999966)
+rotation = 2.2036548
+scale = Vector2(0.99999994, 0.99999994)
+shape = SubResource("RectangleShape2D_0hfnm")
 
 [connection signal="body_entered" from="Fall Detector" to="Fall Detector" method="_on_body_entered"]
 [connection signal="body_entered" from="win" to="win" method="_on_body_entered"]

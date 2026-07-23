@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://bg2ciqpmltnwy"]
+
+[ext_resource type="Texture2D" uid="uid://5kvqm48ed324" path="res://Character anims/Woodplatform.png" id="1_aqelv"]
+
+[node name="Woodplatform5" type="Sprite2D" unique_id=250245965]
+scale = Vector2(0.15986666, 2.3506298)
+texture = ExtResource("1_aqelv")
