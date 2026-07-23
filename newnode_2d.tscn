@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://cdbyrtbs7pt77"]
+
+[ext_resource type="PackedScene" uid="uid://cp8q1nskp7j1c" path="res://rigid_body_2d_2.tscn" id="1_g80kd"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_yy3is"]
+radius = 26.0
+
+[node name="Node2D" type="Node2D" unique_id=1506112684]
+
+[node name="RigidBody2D2" parent="." unique_id=193630194 instance=ExtResource("1_g80kd")]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="RigidBody2D2" unique_id=1684853032]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D2/StaticBody2D" unique_id=1667632775]
+position = Vector2(-26, 87)
+shape = SubResource("CircleShape2D_yy3is")
+
+[node name="PinJoint2D" type="PinJoint2D" parent="." unique_id=1497461382]
+node_a = NodePath("../RigidBody2D2")
+node_b = NodePath("../RigidBody2D2/StaticBody2D")
+disable_collision = false
+angular_limit_enabled = true
+angular_limit_lower = 0.7958701
+angular_limit_upper = 0.8848819

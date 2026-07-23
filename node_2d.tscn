@@ -12,7 +12,7 @@
 [ext_resource type="FontFile" uid="uid://b3m1lr6h2sl0t" path="res://CoveredByYourGrace-Regular.ttf" id="5_rj586"]
 [ext_resource type="Script" uid="uid://chj3ifnoy0hrf" path="res://collectible_label.gd" id="6_d21ai"]
 [ext_resource type="PackedScene" uid="uid://c183280h431bg" path="res://enemy.tscn" id="6_flf07"]
-[ext_resource type="PackedScene" uid="uid://cp8q1nskp7j1c" path="res://rigid_body_2d_2.tscn" id="13_0h7mo"]
+[ext_resource type="PackedScene" uid="uid://cdbyrtbs7pt77" path="res://newnode_2d.tscn" id="13_7vxoj"]
 [ext_resource type="PackedScene" uid="uid://cfd8d2gdyl0b2" path="res://screenshot_20260722124751.tscn" id="13_d2bti"]
 [ext_resource type="Texture2D" uid="uid://b44dmxebqklhp" path="res://Screenshot_2026-07-22_12-49-28.png" id="14_d2bti"]
 [ext_resource type="Texture2D" uid="uid://b4n0b4mmt0do8" path="res://Screenshot_2026-07-22_16-20-33.png" id="16_flf07"]
@@ -267,9 +267,10 @@ position = Vector2(-378, 176)
 shape = SubResource("RectangleShape2D_fqmqj")
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=400795491]
+position = Vector2(-40, -126)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=331697392]
-position = Vector2(78, -90.125)
+position = Vector2(153, 29)
 shape = SubResource("RectangleShape2D_oyan1")
 
 [node name="StaticBody2D3" type="StaticBody2D" parent="." unique_id=1886326467]
@@ -306,9 +307,8 @@ position = Vector2(524, -418.00003)
 rotation = -0.116937056
 shape = SubResource("RectangleShape2D_gjg0o")
 
-[node name="Block body 1" parent="." unique_id=193630194 instance=ExtResource("13_0h7mo")]
-position = Vector2(-6, -232)
-script = null
+[node name="Pivot box" parent="." unique_id=1506112684 instance=ExtResource("13_7vxoj")]
+position = Vector2(8, -214)
 
 [node name="StaticBody2D6" type="StaticBody2D" parent="." unique_id=255279753]
 
@@ -351,6 +351,7 @@ scale = Vector2(43.116665, 2.5061731)
 texture = ExtResource("4_0h7mo")
 
 [node name="Screenshot20260722151051" type="Sprite2D" parent="." unique_id=913213625]
+visible = false
 position = Vector2(-594.00006, -445)
 scale = Vector2(6.3962264, 9.473682)
 texture = ExtResource("16_ta5nu")
@@ -467,7 +468,7 @@ texture = ExtResource("18_k73cj")
 
 [node name="Woodplatform8" type="Sprite2D" parent="." unique_id=504944684]
 z_index = 1
-position = Vector2(47, -88)
+position = Vector2(-159, 167)
 scale = Vector2(1.9910417, 0.3137553)
 texture = ExtResource("18_k73cj")
 
