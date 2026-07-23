@@ -1,12 +1,68 @@
 [gd_scene format=3 uid="uid://by174dfaqu7wt"]
 
 [ext_resource type="Script" uid="uid://cs7xhfh7i7tve" path="res://character_body_2d.gd" id="1_ij6vw"]
-[ext_resource type="Texture2D" uid="uid://bq67suxlhnhaq" path="res://icon.svg" id="2_ghijl"]
 [ext_resource type="Texture2D" uid="uid://c3siiklj1q6ww" path="res://idle.png" id="3_ghijl"]
+[ext_resource type="Texture2D" uid="uid://08ffuupq1ii8" path="res://5.png" id="3_lhvu3"]
+[ext_resource type="Texture2D" uid="uid://1wm6egf2redp" path="res://1.png" id="4_4sjlk"]
+[ext_resource type="Texture2D" uid="uid://cqgivs3ponnnb" path="res://3.png" id="5_qp52p"]
+[ext_resource type="Texture2D" uid="uid://c2t4gcn4beexq" path="res://4.png" id="6_6ct3r"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xr0ua"]
 radius = 47.0
 height = 162.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1kp85"]
+atlas = ExtResource("3_ghijl")
+region = Rect2(0, 0, 600, 600)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qnedo"]
+atlas = ExtResource("3_lhvu3")
+region = Rect2(0, 0, 600, 600)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wyqjk"]
+atlas = ExtResource("4_4sjlk")
+region = Rect2(0, 0, 600, 600)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k85er"]
+atlas = ExtResource("5_qp52p")
+region = Rect2(0, 0, 600, 600)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ebjds"]
+atlas = ExtResource("6_6ct3r")
+region = Rect2(0, 0, 600, 600)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ckmbq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1kp85")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qnedo")
+}],
+"loop": 1,
+"name": &"jump",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wyqjk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k85er")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ebjds")
+}],
+"loop": 1,
+"name": &"walk",
+"speed": 3.0
+}]
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=1230144333]
 script = ExtResource("1_ij6vw")
@@ -20,9 +76,12 @@ shape = SubResource("CapsuleShape2D_xr0ua")
 
 [node name="Icon" type="Sprite2D" parent="." unique_id=726564959]
 position = Vector2(628, 315)
-texture = ExtResource("2_ghijl")
 
 [node name="Idle" type="Sprite2D" parent="." unique_id=404159045]
 position = Vector2(7, -22)
+
+[node name="Idle2" type="AnimatedSprite2D" parent="." unique_id=900145333]
+position = Vector2(-2, -2)
 scale = Vector2(0.3216667, 0.39666668)
-texture = ExtResource("3_ghijl")
+sprite_frames = SubResource("SpriteFrames_ckmbq")
+animation = &"idle"
