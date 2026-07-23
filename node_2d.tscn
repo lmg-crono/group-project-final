@@ -16,6 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://b44dmxebqklhp" path="res://Screenshot_2026-07-22_12-49-28.png" id="14_d2bti"]
 [ext_resource type="Texture2D" uid="uid://b4n0b4mmt0do8" path="res://Screenshot_2026-07-22_16-20-33.png" id="16_flf07"]
 [ext_resource type="Texture2D" uid="uid://b3d4pxlgbw7o2" path="res://Screenshot_2026-07-22_15-10-51.png" id="16_ta5nu"]
+[ext_resource type="Script" uid="uid://efse7p3qdha5" path="res://win.gd" id="17_flf07"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fwou7"]
 size = Vector2(28.068527, 131.16994)
@@ -55,6 +56,9 @@ size = Vector2(1274, 11)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8cre8"]
 size = Vector2(40, 606.625)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ckmbq"]
+radius = 61.008198
 
 [node name="Main" type="Node2D" unique_id=242556052]
 
@@ -358,4 +362,12 @@ position = Vector2(1829.0001, -605)
 scale = Vector2(23.025003, 3.807694)
 texture = ExtResource("16_flf07")
 
+[node name="win" type="Area2D" parent="." unique_id=212417344]
+position = Vector2(329, 285)
+script = ExtResource("17_flf07")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="win" unique_id=1292940543]
+shape = SubResource("CircleShape2D_ckmbq")
+
 [connection signal="body_entered" from="Fall Detector" to="Fall Detector" method="_on_body_entered"]
+[connection signal="body_entered" from="win" to="win" method="_on_body_entered"]
