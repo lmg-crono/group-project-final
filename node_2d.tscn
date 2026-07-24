@@ -27,7 +27,7 @@
 [ext_resource type="AudioStream" uid="uid://bmrlk7cl34vhs" path="res://work.wav" id="26_gt76g"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fwou7"]
-size = Vector2(28.068527, 131.16994)
+size = Vector2(28.068527, 279.14264)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yy3is"]
 size = Vector2(369.18054, 76.0625)
@@ -106,8 +106,10 @@ texture = ExtResource("1_ir8iy")
 [node name="StaticBody2D" type="StaticBody2D" parent="Level 3" unique_id=371736859]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Level 3/StaticBody2D" unique_id=349795426]
-position = Vector2(406.7622, 60.581055)
+position = Vector2(406.7622, -13.405304)
 shape = SubResource("RectangleShape2D_fwou7")
+one_way_collision = true
+one_way_collision_direction = Vector2(-0.98229444, 0.18734345)
 
 [node name="Level 2" type="Sprite2D" parent="." unique_id=1670559714]
 position = Vector2(382.75, -283)
@@ -219,7 +221,7 @@ speed = 3
 
 [node name="CharacterBody2D" parent="." unique_id=1230144333 instance=ExtResource("2_0e48y")]
 z_index = 8
-position = Vector2(1062, -719)
+position = Vector2(800, -723)
 
 [node name="Fall Detector" type="Area2D" parent="." unique_id=89915164]
 position = Vector2(52, 532)
@@ -276,7 +278,9 @@ text = "Collectible label"
 script = ExtResource("6_d21ai")
 
 [node name="Candy Pickup" parent="." unique_id=891364660 instance=ExtResource("5_q6r6c")]
-position = Vector2(-1526, -498)
+position = Vector2(-1522, -487)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Candy Pickup" unique_id=17371265]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=200933981]
 
@@ -364,7 +368,7 @@ scale = Vector2(1.5322055, 0.9)
 texture = ExtResource("14_d2bti")
 
 [node name="Screenshot20260722105345" type="Sprite2D" parent="." unique_id=1428548618]
-position = Vector2(1843, -720)
+position = Vector2(1844.9999, -719.00006)
 scale = Vector2(43.116665, 2.5061731)
 texture = ExtResource("4_0h7mo")
 
@@ -394,9 +398,9 @@ position = Vector2(0, 165.65625)
 shape = SubResource("RectangleShape2D_8cre8")
 
 [node name="Screenshot20260722105346" type="Sprite2D" parent="." unique_id=1101459331]
-position = Vector2(-475.8954, -749.00006)
+position = Vector2(-475.8954, -744.8678)
 rotation = 1.5707964
-scale = Vector2(2.429061, 10.127364)
+scale = Vector2(2.6127183, 10.127364)
 texture = ExtResource("4_0h7mo")
 
 [node name="Background void" type="Sprite2D" parent="." unique_id=603306445]
@@ -462,7 +466,7 @@ scale = Vector2(0.15333334, 3.5549998)
 texture = ExtResource("18_k73cj")
 
 [node name="Woodplatform9" type="Sprite2D" parent="." unique_id=1854773815]
-position = Vector2(973, -299)
+position = Vector2(1005, -284.00003)
 scale = Vector2(0.46708316, 4.2422915)
 texture = ExtResource("18_k73cj")
 
