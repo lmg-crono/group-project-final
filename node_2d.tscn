@@ -407,14 +407,12 @@ scale = Vector2(2.6127183, 10.127364)
 texture = ExtResource("4_0h7mo")
 
 [node name="CandyBox" type="Sprite2D" parent="." unique_id=1415647835]
-visible = false
 position = Vector2(-688, -661.00006)
 rotation = 1.5707964
 scale = Vector2(2.6127183, 2.6582286)
 texture = ExtResource("4_0h7mo")
 
 [node name="Background void" type="Sprite2D" parent="." unique_id=603306445]
-visible = false
 z_index = -20
 position = Vector2(479.00003, 336)
 scale = Vector2(176.02222, 42.814816)

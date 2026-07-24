@@ -45,6 +45,110 @@ script = ExtResource("1_c1t8d")
 position = Vector2(-190, 29)
 texture = ExtResource("2_g4wvt")
 
+[node name="6" type="Sprite2D" parent="MarginContainer/CenterContainer/VBoxContainer" unique_id=1518707265]
+position = Vector2(-190, 29)
+texture = ExtResource("2_g4wvt")
+
+[node name="7" type="Sprite2D" parent="MarginContainer/CenterContainer/VBoxContainer" unique_id=80680550]
+position = Vector2(-190, 29)
+texture = ExtResource("2_g4wvt")
+
+[node name="8" type="Sprite2D" parent="MarginContainer/CenterContainer/VBoxContainer" unique_id=1252219489]
+position = Vector2(-190, 29)
+texture = ExtResource("2_g4wvt")
+
+[node name="9" type="Sprite2D" parent="MarginContainer/CenterContainer/VBoxContainer" unique_id=1522126388]
+position = Vector2(-190, 29)
+texture = ExtResource("2_g4wvt")
+
+[node name="10" type="Sprite2D" parent="MarginContainer/CenterContainer/VBoxContainer" unique_id=43094365]
+position = Vector2(-190, 29)
+texture = ExtResource("2_g4wvt")
+
+[node name="11" type="Sprite2D" parent="MarginContainer/CenterContainer/VBoxContainer" unique_id=1165213213]
+position = Vector2(-190, 29)
+texture = ExtResource("2_g4wvt")
+
+[node name="12" type="Sprite2D" parent="MarginContainer/CenterContainer/VBoxContainer" unique_id=1179481897]
+position = Vector2(-190, 29)
+texture = ExtResource("2_g4wvt")
+
+[node name="13" type="Sprite2D" parent="MarginContainer/CenterContainer/VBoxContainer" unique_id=1164559080]
+position = Vector2(-190, 29)
+texture = ExtResource("2_g4wvt")
+
+[node name="14" type="Sprite2D" parent="MarginContainer/CenterContainer/VBoxContainer" unique_id=344762170]
+position = Vector2(-190, 29)
+texture = ExtResource("2_g4wvt")
+
+[node name="15" type="Sprite2D" parent="MarginContainer/CenterContainer/VBoxContainer" unique_id=122356909]
+position = Vector2(-190, 29)
+texture = ExtResource("2_g4wvt")
+
+[node name="16" type="Sprite2D" parent="MarginContainer/CenterContainer/VBoxContainer" unique_id=891472107]
+position = Vector2(-190, 29)
+texture = ExtResource("2_g4wvt")
+
+[node name="17" type="Sprite2D" parent="MarginContainer/CenterContainer/VBoxContainer" unique_id=1196710632]
+position = Vector2(-190, 29)
+texture = ExtResource("2_g4wvt")
+
+[node name="18" type="Sprite2D" parent="MarginContainer/CenterContainer/VBoxContainer" unique_id=28654547]
+position = Vector2(-190, 29)
+texture = ExtResource("2_g4wvt")
+
+[node name="19" type="Sprite2D" parent="MarginContainer/CenterContainer/VBoxContainer" unique_id=1569927638]
+position = Vector2(-190, 29)
+texture = ExtResource("2_g4wvt")
+
+[node name="20" type="Sprite2D" parent="MarginContainer/CenterContainer/VBoxContainer" unique_id=1798901825]
+position = Vector2(211.5, 211)
+texture = ExtResource("2_g4wvt")
+
+[node name="21" type="Sprite2D" parent="MarginContainer/CenterContainer/VBoxContainer" unique_id=516154676]
+position = Vector2(-356.5, -269)
+texture = ExtResource("2_g4wvt")
+
+[node name="22" type="Sprite2D" parent="MarginContainer/CenterContainer/VBoxContainer" unique_id=1950260265]
+position = Vector2(497.5, -169)
+texture = ExtResource("2_g4wvt")
+
+[node name="23" type="Sprite2D" parent="MarginContainer/CenterContainer/VBoxContainer" unique_id=721754230]
+position = Vector2(249.5, -241)
+texture = ExtResource("2_g4wvt")
+
+[node name="24" type="Sprite2D" parent="MarginContainer/CenterContainer/VBoxContainer" unique_id=346367272]
+position = Vector2(-117.5, -275)
+texture = ExtResource("2_g4wvt")
+
+[node name="25" type="Sprite2D" parent="MarginContainer/CenterContainer/VBoxContainer" unique_id=1832394975]
+position = Vector2(524.5, 73)
+texture = ExtResource("2_g4wvt")
+
+[node name="26" type="Sprite2D" parent="MarginContainer/CenterContainer/VBoxContainer" unique_id=140562565]
+position = Vector2(-395.5, 221)
+texture = ExtResource("2_g4wvt")
+
+[node name="27" type="Sprite2D" parent="MarginContainer/CenterContainer/VBoxContainer" unique_id=1800516807]
+position = Vector2(-420.5, 6)
+texture = ExtResource("2_g4wvt")
+
+[node name="28" type="Sprite2D" parent="MarginContainer/CenterContainer/VBoxContainer" unique_id=1574701917]
+position = Vector2(378.5, 325)
+texture = ExtResource("2_g4wvt")
+
+[node name="29" type="Sprite2D" parent="MarginContainer/CenterContainer/VBoxContainer" unique_id=457656296]
+position = Vector2(-151.5, 269)
+texture = ExtResource("2_g4wvt")
+
+[node name="30" type="Sprite2D" parent="MarginContainer/CenterContainer/VBoxContainer" unique_id=1003379462]
+position = Vector2(-105.5, 157)
+texture = ExtResource("2_g4wvt")
+
+[node name="31" type="Sprite2D" parent="MarginContainer/CenterContainer/VBoxContainer" unique_id=763548969]
+position = Vector2(469.5, 259)
+texture = ExtResource("2_g4wvt")
+
 [node name="3" type="Sprite2D" parent="MarginContainer/CenterContainer/VBoxContainer" unique_id=1948525029]
 position = Vector2(407, 34)
 texture = ExtResource("2_g4wvt")
