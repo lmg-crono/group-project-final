@@ -4,15 +4,14 @@
 [ext_resource type="Texture2D" uid="uid://c3siiklj1q6ww" path="res://idle.png" id="3_ghijl"]
 [ext_resource type="Texture2D" uid="uid://08ffuupq1ii8" path="res://5.png" id="3_lhvu3"]
 [ext_resource type="Texture2D" uid="uid://1wm6egf2redp" path="res://1.png" id="4_4sjlk"]
-[ext_resource type="Texture2D" uid="uid://suapx2su27oi" path="res://walking.png" id="4_6ct3r"]
-[ext_resource type="Texture2D" uid="uid://wl7wnpbv54v4" path="res://bitmap.png" id="5_1kp85"]
+[ext_resource type="Texture2D" uid="uid://c76ncvajmvxc6" path="res://1left.png" id="4_6ct3r"]
+[ext_resource type="Texture2D" uid="uid://dqe2476t3s28e" path="res://3left.png" id="5_1kp85"]
 [ext_resource type="Texture2D" uid="uid://cqgivs3ponnnb" path="res://3.png" id="5_qp52p"]
 [ext_resource type="Texture2D" uid="uid://c2t4gcn4beexq" path="res://4.png" id="6_6ct3r"]
-[ext_resource type="Texture2D" uid="uid://cxtf18pf711bk" path="res://wak.png" id="6_qnedo"]
+[ext_resource type="Texture2D" uid="uid://c4vxhnag4cmr2" path="res://4left.png" id="6_qnedo"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xr0ua"]
-radius = 47.0
-height = 162.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p316n"]
+size = Vector2(49, 133)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1kp85"]
 atlas = ExtResource("3_ghijl")
@@ -54,13 +53,13 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("6_qnedo")
+"texture": ExtResource("4_6ct3r")
 }, {
 "duration": 1.0,
 "texture": ExtResource("5_1kp85")
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_6ct3r")
+"texture": ExtResource("6_qnedo")
 }],
 "loop": 1,
 "name": &"walking-left ",
@@ -88,14 +87,14 @@ script = ExtResource("1_ij6vw")
 scale = Vector2(2.1875, 0.4765625)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1045111342]
-position = Vector2(-1, 1)
-shape = SubResource("CapsuleShape2D_xr0ua")
+position = Vector2(-3.5, 10.5)
+shape = SubResource("RectangleShape2D_p316n")
 
 [node name="Icon" type="Sprite2D" parent="." unique_id=726564959]
 position = Vector2(628, 315)
 
 [node name="CharecterAnimation" type="AnimatedSprite2D" parent="." unique_id=900145333]
-position = Vector2(-8.245333, 18.318947)
-scale = Vector2(0.19457261, 0.3051094)
+position = Vector2(5, -10)
+scale = Vector2(0.19843996, 0.305862)
 sprite_frames = SubResource("SpriteFrames_ckmbq")
 animation = &"walking-left "
