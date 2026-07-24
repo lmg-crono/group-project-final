@@ -9,13 +9,13 @@
 [ext_resource type="Script" uid="uid://clv217yn0xyd1" path="res://fall_detector.gd" id="3_epypp"]
 [ext_resource type="Texture2D" uid="uid://bmdrwcwp257s5" path="res://Screenshot_2026-07-22_10-53-45.png" id="4_0h7mo"]
 [ext_resource type="Script" uid="uid://blj0pu76ijjty" path="res://lives_lable.gd" id="4_0hol4"]
-[ext_resource type="PackedScene" uid="uid://doaa0s0jv6gt3" path="res://candy_pickup.tscn" id="5_q6r6c"]
 [ext_resource type="FontFile" uid="uid://b3m1lr6h2sl0t" path="res://CoveredByYourGrace-Regular.ttf" id="5_rj586"]
 [ext_resource type="Script" uid="uid://chj3ifnoy0hrf" path="res://collectible_label.gd" id="6_d21ai"]
 [ext_resource type="PackedScene" uid="uid://c183280h431bg" path="res://enemy.tscn" id="6_flf07"]
 [ext_resource type="PackedScene" uid="uid://cdbyrtbs7pt77" path="res://newnode_2d.tscn" id="13_7vxoj"]
 [ext_resource type="PackedScene" uid="uid://cfd8d2gdyl0b2" path="res://screenshot_20260722124751.tscn" id="13_d2bti"]
 [ext_resource type="Texture2D" uid="uid://b44dmxebqklhp" path="res://Screenshot_2026-07-22_12-49-28.png" id="14_d2bti"]
+[ext_resource type="Texture2D" uid="uid://dbhsh2thopqvb" path="res://candy-corn.png" id="14_gt76g"]
 [ext_resource type="Texture2D" uid="uid://b4n0b4mmt0do8" path="res://Screenshot_2026-07-22_16-20-33.png" id="16_flf07"]
 [ext_resource type="Texture2D" uid="uid://b3d4pxlgbw7o2" path="res://Screenshot_2026-07-22_15-10-51.png" id="16_ta5nu"]
 [ext_resource type="Script" uid="uid://efse7p3qdha5" path="res://win.gd" id="17_flf07"]
@@ -24,6 +24,7 @@
 [ext_resource type="PackedScene" uid="uid://dy4hlvu4lw7qg" path="res://area_enemy.tscn" id="20_fs4d3"]
 [ext_resource type="Texture2D" uid="uid://cweoqv6wh77ac" path="res://Candy.png" id="22_ei405"]
 [ext_resource type="Script" uid="uid://5ufp0q3ywxhj" path="res://victory.gd" id="24_2nhjh"]
+[ext_resource type="Script" uid="uid://d2ckiwdgk78et" path="res://candy_pickup.gd" id="25_gt76g"]
 [ext_resource type="AudioStream" uid="uid://bmrlk7cl34vhs" path="res://work.wav" id="26_gt76g"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fwou7"]
@@ -96,6 +97,9 @@ size = Vector2(41, 45)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1fc5x"]
 size = Vector2(593, 3)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_e2ijx"]
+radius = 91.26884
 
 [node name="Main" type="Node2D" unique_id=242556052]
 script = ExtResource("1_e8dv2")
@@ -236,7 +240,6 @@ shape = SubResource("RectangleShape2D_c3dyn")
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=541564298]
 
 [node name="Control" type="Control" parent="CanvasLayer" unique_id=1942786605]
-visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -278,12 +281,6 @@ theme_override_fonts/font = ExtResource("5_rj586")
 theme_override_font_sizes/font_size = 25
 text = "Collectible label"
 script = ExtResource("6_d21ai")
-
-[node name="Candy Pickup" parent="." unique_id=891364660 instance=ExtResource("5_q6r6c")]
-z_index = 2
-position = Vector2(-1529, -500)
-
-[node name="StaticBody2D" type="StaticBody2D" parent="Candy Pickup" unique_id=17371265]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Candy Pickup/StaticBody2D" unique_id=533922833]
 shape = SubResource("RectangleShape2D_gu5mo")
@@ -618,6 +615,123 @@ position = Vector2(-303, -527)
 position = Vector2(-22.5, -9.5)
 shape = SubResource("RectangleShape2D_1fc5x")
 
+[node name="candy_pickup" type="Area2D" parent="." unique_id=1125129904]
+position = Vector2(-136, 116)
+script = ExtResource("25_gt76g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="candy_pickup" unique_id=394805959]
+shape = SubResource("CircleShape2D_e2ijx")
+
+[node name="Sprite2D" type="Sprite2D" parent="candy_pickup" unique_id=1523404546]
+position = Vector2(3.8146973e-06, -0.9999962)
+scale = Vector2(0.4082569, 0.45689654)
+texture = ExtResource("14_gt76g")
+
+[node name="candy_pickup2" type="Area2D" parent="." unique_id=243170371]
+position = Vector2(216, 35)
+script = ExtResource("25_gt76g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="candy_pickup2" unique_id=59059420]
+shape = SubResource("CircleShape2D_e2ijx")
+
+[node name="Sprite2D" type="Sprite2D" parent="candy_pickup2" unique_id=1013514298]
+position = Vector2(3.8146973e-06, -0.9999962)
+scale = Vector2(0.4082569, 0.45689654)
+texture = ExtResource("14_gt76g")
+
+[node name="candy_pickup3" type="Area2D" parent="." unique_id=190911251]
+position = Vector2(571, -21)
+script = ExtResource("25_gt76g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="candy_pickup3" unique_id=88242906]
+shape = SubResource("CircleShape2D_e2ijx")
+
+[node name="Sprite2D" type="Sprite2D" parent="candy_pickup3" unique_id=1140462053]
+position = Vector2(3.8146973e-06, -0.9999962)
+scale = Vector2(0.4082569, 0.45689654)
+texture = ExtResource("14_gt76g")
+
+[node name="candy_pickup4" type="Area2D" parent="." unique_id=826949045]
+position = Vector2(380, -281)
+script = ExtResource("25_gt76g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="candy_pickup4" unique_id=269272593]
+shape = SubResource("CircleShape2D_e2ijx")
+
+[node name="Sprite2D" type="Sprite2D" parent="candy_pickup4" unique_id=252814062]
+position = Vector2(3.8146973e-06, -0.9999962)
+scale = Vector2(0.4082569, 0.45689654)
+texture = ExtResource("14_gt76g")
+
+[node name="candy_pickup5" type="Area2D" parent="." unique_id=691496203]
+position = Vector2(-216, -444)
+script = ExtResource("25_gt76g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="candy_pickup5" unique_id=174747115]
+shape = SubResource("CircleShape2D_e2ijx")
+
+[node name="Sprite2D" type="Sprite2D" parent="candy_pickup5" unique_id=1000432312]
+position = Vector2(3.8146973e-06, -0.9999962)
+scale = Vector2(0.4082569, 0.45689654)
+texture = ExtResource("14_gt76g")
+
+[node name="candy_pickup6" type="Area2D" parent="." unique_id=48295302]
+position = Vector2(191, -652)
+script = ExtResource("25_gt76g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="candy_pickup6" unique_id=1586848445]
+shape = SubResource("CircleShape2D_e2ijx")
+
+[node name="Sprite2D" type="Sprite2D" parent="candy_pickup6" unique_id=1143176335]
+position = Vector2(3.8146973e-06, -0.9999962)
+scale = Vector2(0.4082569, 0.45689654)
+texture = ExtResource("14_gt76g")
+
+[node name="candy_pickup7" type="Area2D" parent="." unique_id=1066006203]
+position = Vector2(-697, -668)
+script = ExtResource("25_gt76g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="candy_pickup7" unique_id=1093751296]
+shape = SubResource("CircleShape2D_e2ijx")
+
+[node name="Sprite2D" type="Sprite2D" parent="candy_pickup7" unique_id=485197979]
+position = Vector2(1.0000019, -11.999985)
+scale = Vector2(1.7901378, 1.553879)
+texture = ExtResource("14_gt76g")
+
+[node name="candy_pickup8" type="Area2D" parent="." unique_id=1502943749]
+position = Vector2(696, -725)
+script = ExtResource("25_gt76g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="candy_pickup8" unique_id=584853462]
+shape = SubResource("CircleShape2D_e2ijx")
+
+[node name="Sprite2D" type="Sprite2D" parent="candy_pickup8" unique_id=1251561447]
+position = Vector2(3.8146973e-06, -0.9999962)
+scale = Vector2(0.4082569, 0.45689654)
+texture = ExtResource("14_gt76g")
+
+[node name="candy_pickup9" type="Area2D" parent="." unique_id=995249972]
+position = Vector2(1452, -729)
+script = ExtResource("25_gt76g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="candy_pickup9" unique_id=1950982454]
+shape = SubResource("CircleShape2D_e2ijx")
+
+[node name="Sprite2D" type="Sprite2D" parent="candy_pickup9" unique_id=946967942]
+position = Vector2(3.8146973e-06, -0.9999962)
+scale = Vector2(0.4082569, 0.45689654)
+texture = ExtResource("14_gt76g")
+
 [connection signal="body_entered" from="Fall Detector" to="Fall Detector" method="_on_body_entered"]
 [connection signal="body_entered" from="win" to="win" method="_on_body_entered"]
 [connection signal="body_entered" from="Candy/victory" to="Candy/victory" method="_on_body_entered"]
+[connection signal="body_entered" from="candy_pickup" to="candy_pickup" method="_on_body_entered"]
+[connection signal="body_entered" from="candy_pickup2" to="candy_pickup2" method="_on_body_entered"]
+[connection signal="body_entered" from="candy_pickup3" to="candy_pickup3" method="_on_body_entered"]
+[connection signal="body_entered" from="candy_pickup4" to="candy_pickup4" method="_on_body_entered"]
+[connection signal="body_entered" from="candy_pickup5" to="candy_pickup5" method="_on_body_entered"]
+[connection signal="body_entered" from="candy_pickup6" to="candy_pickup6" method="_on_body_entered"]
+[connection signal="body_entered" from="candy_pickup7" to="candy_pickup7" method="_on_body_entered"]
+[connection signal="body_entered" from="candy_pickup8" to="candy_pickup8" method="_on_body_entered"]
+[connection signal="body_entered" from="candy_pickup9" to="candy_pickup9" method="_on_body_entered"]

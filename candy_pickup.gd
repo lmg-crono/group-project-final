@@ -9,3 +9,7 @@ func _on_body_entered(body: Node2D) -> void:
 		Global.update_collectables.emit()
 		queue_free()
 @export var collectible_amount : int = 1
+
+
+
+	
