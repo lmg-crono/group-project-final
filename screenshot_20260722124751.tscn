@@ -15,6 +15,8 @@ script = ExtResource("2_l5834")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1036527595]
 position = Vector2(0, -1)
 shape = SubResource("RectangleShape2D_yy3is")
+one_way_collision = true
+one_way_collision_direction = Vector2(0.28734788, 0.95782626)
 
 [node name="Screenshot20260722124751" type="Sprite2D" parent="." unique_id=1681023130]
 scale = Vector2(1.3333334, 1.4629629)
@@ -25,5 +27,6 @@ texture = ExtResource("1_x504v")
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D" unique_id=79618709]
 position = Vector2(1.5, -2)
 shape = SubResource("RectangleShape2D_boomn")
+one_way_collision = true
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

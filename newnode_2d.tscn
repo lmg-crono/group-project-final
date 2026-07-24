@@ -1,31 +1,122 @@
 [gd_scene format=3 uid="uid://cdbyrtbs7pt77"]
 
-[ext_resource type="PackedScene" uid="uid://cp8q1nskp7j1c" path="res://rigid_body_2d_2.tscn" id="1_g80kd"]
+[ext_resource type="Script" uid="uid://dcobngovv3ir4" path="res://newnode_2d.gd" id="1_kppno"]
+[ext_resource type="Texture2D" uid="uid://b3xnv4rf6i721" path="res://Screenshot_2026-07-22_10-53-28.png" id="2_kppno"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_yy3is"]
-radius = 26.0
+[sub_resource type="Animation" id="Animation_ig8wa"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Screenshot20260722105328:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Area2D:monitoring")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
 
-[node name="Node2D" type="Node2D" unique_id=1506112684]
+[sub_resource type="Animation" id="Animation_fq135"]
+resource_name = "fall"
+length = 1.0666667
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = false
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.53333336),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, -1.0925761]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Screenshot20260722105328:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.53333336),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, -0.9128072]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Area2D:monitoring")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1.0666667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
 
-[node name="PinJoint2D" type="PinJoint2D" parent="." unique_id=1497461382]
-node_a = NodePath("../RigidBody2D2")
-node_b = NodePath("../StaticBody2D")
-angular_limit_enabled = true
-angular_limit_lower = 0.7958701
-angular_limit_upper = 0.8848819
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_2vfpy"]
+_data = {
+&"RESET": SubResource("Animation_ig8wa"),
+&"fall": SubResource("Animation_fq135")
+}
 
-[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1684853032]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yy3is"]
+size = Vector2(70, 81)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1667632775]
-position = Vector2(-43, -16)
-shape = SubResource("CircleShape2D_yy3is")
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_boomn"]
+size = Vector2(26.237701, 111.293945)
 
-[node name="RigidBody2D2" parent="." unique_id=193630194 instance=ExtResource("1_g80kd")]
+[node name="Hinge" type="Node2D" unique_id=1506112684]
+script = ExtResource("1_kppno")
 
-[node name="CollisionShape2D" parent="RigidBody2D2" index="0" unique_id=725574164]
-position = Vector2(-1.0000038, -185)
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=729281435]
+libraries/ = SubResource("AnimationLibrary_2vfpy")
 
-[node name="Screenshot20260722105317" parent="RigidBody2D2" index="1" unique_id=750198928]
-position = Vector2(-3, -183)
+[node name="Area2D" type="Area2D" parent="." unique_id=296169401]
 
-[editable path="RigidBody2D2"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=2045145457]
+position = Vector2(274, -168)
+shape = SubResource("RectangleShape2D_yy3is")
+
+[node name="Screenshot20260722105328" type="Sprite2D" parent="." unique_id=1737867086]
+position = Vector2(-67, -21)
+scale = Vector2(2.6987188, 2.665254)
+texture = ExtResource("2_kppno")
+offset = Vector2(2.223278, -60.782196)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Screenshot20260722105328" unique_id=1305372595]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Screenshot20260722105328/StaticBody2D" unique_id=1442568878]
+position = Vector2(2.9484959, -60.69373)
+scale = Vector2(1.0000002, 1)
+shape = SubResource("RectangleShape2D_boomn")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
