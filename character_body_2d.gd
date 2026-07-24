@@ -13,8 +13,12 @@ func _physics_process(delta: float) -> void:
 	
 	if abs(velocity.y) > 100:
 		$CharecterAnimation.play("jump")
-	elif  abs(velocity.x) > 0:
-		$CharecterAnimation.play("walk")
+	elif  (velocity.x) > 0:
+		$CharecterAnimation.play("walking-right")
+		
+	elif (velocity.x) < 0:
+		$CharecterAnimation.play("walking-left ")
+		
 	else:
 		$CharecterAnimation.play("idle")
 		
