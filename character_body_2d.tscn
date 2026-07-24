@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://cs7xhfh7i7tve" path="res://character_body_2d.gd" id="1_ij6vw"]
 [ext_resource type="Texture2D" uid="uid://c3siiklj1q6ww" path="res://idle.png" id="3_ghijl"]
 [ext_resource type="Texture2D" uid="uid://08ffuupq1ii8" path="res://5.png" id="3_lhvu3"]
+[ext_resource type="Texture2D" uid="uid://c8f2chf0qh1y5" path="res://kick.png" id="4_1kp85"]
 [ext_resource type="Texture2D" uid="uid://1wm6egf2redp" path="res://1.png" id="4_4sjlk"]
 [ext_resource type="Texture2D" uid="uid://c76ncvajmvxc6" path="res://1left.png" id="4_6ct3r"]
 [ext_resource type="Texture2D" uid="uid://dqe2476t3s28e" path="res://3left.png" id="5_1kp85"]
@@ -53,6 +54,14 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("4_1kp85")
+}],
+"loop": 1,
+"name": &"kicking",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": ExtResource("4_6ct3r")
 }, {
 "duration": 1.0,
@@ -94,7 +103,7 @@ shape = SubResource("RectangleShape2D_p316n")
 position = Vector2(628, 315)
 
 [node name="CharecterAnimation" type="AnimatedSprite2D" parent="." unique_id=900145333]
-position = Vector2(5, -10)
-scale = Vector2(0.19843996, 0.305862)
+position = Vector2(1, -7)
+scale = Vector2(0.18421997, 0.30626434)
 sprite_frames = SubResource("SpriteFrames_ckmbq")
-animation = &"walking-left "
+animation = &"idle"
