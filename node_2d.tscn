@@ -266,10 +266,10 @@ theme_override_constants/separation = 4
 [node name="Lives Lable" type="Label" parent="CanvasLayer/Control/MarginContainer/VBoxContainer" unique_id=1215200408]
 layout_mode = 2
 size_flags_vertical = 0
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_colors/font_outline_color = Color(0.0009362185, 0.0008104551, 0.011504103, 1)
+theme_override_colors/font_outline_color = Color(0.27878034, 0.30298012, 0.8576669, 1)
+theme_override_constants/outline_size = 12
 theme_override_fonts/font = ExtResource("5_rj586")
-theme_override_font_sizes/font_size = 25
+theme_override_font_sizes/font_size = 40
 text = "sdsasaddsadsadsa"
 script = ExtResource("4_0hol4")
 
@@ -277,8 +277,10 @@ script = ExtResource("4_0hol4")
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
+theme_override_colors/font_outline_color = Color(0.07014961, 0.30795, 0.99999505, 1)
+theme_override_constants/outline_size = 10
 theme_override_fonts/font = ExtResource("5_rj586")
-theme_override_font_sizes/font_size = 25
+theme_override_font_sizes/font_size = 40
 text = "Collectible label"
 script = ExtResource("6_d21ai")
 
