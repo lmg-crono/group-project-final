@@ -43,7 +43,7 @@ size = Vector2(2536, 42)
 size = Vector2(23, 548)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oyan1"]
-size = Vector2(851, 74.25)
+size = Vector2(779.5, 74.25)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l7l66"]
 size = Vector2(1967.5, 69)
@@ -202,7 +202,7 @@ speed = 3
 
 [node name="CharacterBody2D" parent="." unique_id=1230144333 instance=ExtResource("2_0e48y")]
 z_index = 8
-position = Vector2(1564, -719)
+position = Vector2(1260, -761)
 
 [node name="Fall Detector" type="Area2D" parent="." unique_id=89915164]
 position = Vector2(52, 532)
@@ -274,8 +274,9 @@ shape = SubResource("RectangleShape2D_fqmqj")
 position = Vector2(-40, -126)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=331697392]
-position = Vector2(153, 29)
+position = Vector2(126, 41)
 shape = SubResource("RectangleShape2D_oyan1")
+one_way_collision = true
 
 [node name="StaticBody2D3" type="StaticBody2D" parent="." unique_id=1886326467]
 
@@ -308,7 +309,7 @@ rotation = -0.116937056
 shape = SubResource("RectangleShape2D_gjg0o")
 
 [node name="Pivot box" parent="." unique_id=1506112684 instance=ExtResource("13_7vxoj")]
-position = Vector2(-60, -207)
+position = Vector2(44, -105)
 
 [node name="StaticBody2D6" type="StaticBody2D" parent="." unique_id=255279753]
 
@@ -346,7 +347,7 @@ scale = Vector2(1.5322055, 0.9)
 texture = ExtResource("14_d2bti")
 
 [node name="Screenshot20260722105345" type="Sprite2D" parent="." unique_id=1428548618]
-position = Vector2(1865, -728)
+position = Vector2(1857, -725)
 scale = Vector2(43.116665, 2.5061731)
 texture = ExtResource("4_0h7mo")
 
@@ -469,7 +470,7 @@ texture = ExtResource("18_k73cj")
 
 [node name="Woodplatform8" type="Sprite2D" parent="." unique_id=504944684]
 z_index = 1
-position = Vector2(-159, 167)
+position = Vector2(-719, 178.00002)
 scale = Vector2(1.9910417, 0.3137553)
 texture = ExtResource("18_k73cj")
 
