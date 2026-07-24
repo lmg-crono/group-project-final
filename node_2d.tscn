@@ -41,6 +41,8 @@ size = Vector2(96.91429, 517.2461)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_c3dyn"]
 size = Vector2(2536, 42)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gu5mo"]
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fqmqj"]
 size = Vector2(23, 548)
 
@@ -109,7 +111,7 @@ texture = ExtResource("1_ir8iy")
 position = Vector2(406.7622, -13.405304)
 shape = SubResource("RectangleShape2D_fwou7")
 one_way_collision = true
-one_way_collision_direction = Vector2(-0.98229444, 0.18734345)
+one_way_collision_direction = Vector2(-0.9822945, 0.18734346)
 
 [node name="Level 2" type="Sprite2D" parent="." unique_id=1670559714]
 position = Vector2(382.75, -283)
@@ -278,9 +280,13 @@ text = "Collectible label"
 script = ExtResource("6_d21ai")
 
 [node name="Candy Pickup" parent="." unique_id=891364660 instance=ExtResource("5_q6r6c")]
-position = Vector2(-1522, -487)
+z_index = 2
+position = Vector2(-1529, -500)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Candy Pickup" unique_id=17371265]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Candy Pickup/StaticBody2D" unique_id=533922833]
+shape = SubResource("RectangleShape2D_gu5mo")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=200933981]
 
@@ -357,7 +363,7 @@ position = Vector2(-47.25, -636)
 scale = Vector2(1.7, 1.9012344)
 texture = ExtResource("4_0h7mo")
 
-[node name="Screenshot20260722124751" parent="." unique_id=1681023130 instance=ExtResource("13_d2bti")]
+[node name="Screenshot20260722124751" parent="." unique_id=1681023130 groups=["enemy"] instance=ExtResource("13_d2bti")]
 position = Vector2(-34.000008, -631)
 collision_layer = 3
 collision_mask = 3
@@ -401,6 +407,13 @@ shape = SubResource("RectangleShape2D_8cre8")
 position = Vector2(-475.8954, -744.8678)
 rotation = 1.5707964
 scale = Vector2(2.6127183, 10.127364)
+texture = ExtResource("4_0h7mo")
+
+[node name="CandyBox" type="Sprite2D" parent="." unique_id=1415647835]
+visible = false
+position = Vector2(-688, -661.00006)
+rotation = 1.5707964
+scale = Vector2(2.6127183, 2.6582286)
 texture = ExtResource("4_0h7mo")
 
 [node name="Background void" type="Sprite2D" parent="." unique_id=603306445]

@@ -104,6 +104,9 @@ animations = [{
 "speed": 3.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yy3is"]
+size = Vector2(63, 85)
+
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=1230144333]
 script = ExtResource("1_ij6vw")
 
@@ -117,7 +120,7 @@ shape = SubResource("RectangleShape2D_p316n")
 [node name="Icon" type="Sprite2D" parent="." unique_id=726564959]
 position = Vector2(628, 315)
 
-[node name="CharecterAnimation" type="AnimatedSprite2D" parent="." unique_id=900145333]
+[node name="CharacterAnimation" type="AnimatedSprite2D" parent="." unique_id=900145333]
 position = Vector2(3.000001, -13.999998)
 scale = Vector2(0.22068141, 0.35884643)
 sprite_frames = SubResource("SpriteFrames_ckmbq")
@@ -126,3 +129,14 @@ animation = &"kicking"
 [node name="KickTimer" type="Timer" parent="." unique_id=1561261885]
 wait_time = 0.25
 one_shot = true
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1840175129 groups=["kick"]]
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1322782101]
+position = Vector2(56.5, 10.5)
+shape = SubResource("RectangleShape2D_yy3is")
+disabled = true
+
+[connection signal="timeout" from="KickTimer" to="." method="_on_kick_timer_timeout"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
