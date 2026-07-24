@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://b7p327np83df3"]
+
+[ext_resource type="Script" uid="uid://d2ckiwdgk78et" path="res://candy_pickup.gd" id="1_0ntfl"]
+[ext_resource type="Texture2D" uid="uid://dbhsh2thopqvb" path="res://candy-corn.png" id="2_4ri2c"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_e2ijx"]
+radius = 31.016125
+
+[node name="candy_pickup8" type="Area2D" unique_id=25823726]
+script = ExtResource("1_0ntfl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1127019483]
+shape = SubResource("CircleShape2D_e2ijx")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1203599610]
+position = Vector2(3.8146973e-06, -0.9999962)
+scale = Vector2(0.4082569, 0.45689654)
+texture = ExtResource("2_4ri2c")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

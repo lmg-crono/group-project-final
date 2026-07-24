@@ -1,0 +1,62 @@
+[gd_scene format=3 uid="uid://ofmfphrwp3eb"]
+
+[ext_resource type="Script" uid="uid://dj35fjseddr2n" path="res://button_2.gd" id="1_qn1rc"]
+[ext_resource type="Texture2D" uid="uid://8yh7retj54el" path="res://2.png" id="2_1n0d2"]
+
+[node name="start" type="Node2D" unique_id=1448524817]
+
+[node name="Control" type="Control" parent="." unique_id=1167132917]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 611.0
+offset_top = 274.0
+offset_right = 651.0
+offset_bottom = 314.0
+
+[node name="MarginContainer" type="MarginContainer" parent="Control" unique_id=569408455]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -88.5
+offset_top = -55.0
+offset_right = 48.5
+offset_bottom = 15.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="Control/MarginContainer" unique_id=311086424]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/MarginContainer/CenterContainer" unique_id=1002718791]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Control/MarginContainer/CenterContainer/VBoxContainer" unique_id=1898256954]
+layout_mode = 2
+text = "Little Candy"
+
+[node name="Button2" type="Button" parent="Control/MarginContainer/CenterContainer/VBoxContainer" unique_id=495224220]
+layout_mode = 2
+text = "Play "
+script = ExtResource("1_qn1rc")
+
+[node name="2" type="Sprite2D" parent="Control/MarginContainer/CenterContainer/VBoxContainer" unique_id=1124252938]
+position = Vector2(-190, 29)
+texture = ExtResource("2_1n0d2")
+
+[node name="3" type="Sprite2D" parent="Control/MarginContainer/CenterContainer/VBoxContainer" unique_id=1475383176]
+position = Vector2(407, 34)
+texture = ExtResource("2_1n0d2")
+
+[node name="4" type="Sprite2D" parent="Control/MarginContainer/CenterContainer/VBoxContainer" unique_id=1179152949]
+position = Vector2(113, 247)
+texture = ExtResource("2_1n0d2")
+
+[node name="5" type="Sprite2D" parent="Control/MarginContainer/CenterContainer/VBoxContainer" unique_id=1541994328]
+position = Vector2(111, -286)
+texture = ExtResource("2_1n0d2")
+
+[connection signal="button_down" from="Control/MarginContainer/CenterContainer/VBoxContainer/Button2" to="Control/MarginContainer/CenterContainer/VBoxContainer/Button2" method="_on_button_down"]
+[connection signal="pressed" from="Control/MarginContainer/CenterContainer/VBoxContainer/Button2" to="Control/MarginContainer/CenterContainer/VBoxContainer/Button2" method="_on_pressed"]

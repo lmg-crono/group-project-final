@@ -45,6 +45,8 @@ func _physics_process(delta: float) -> void:
 	elif velocity.x < 0:
 		$CharacterAnimation.flip_h = true
 
+	if  Input.is_action_just_pressed("Quit"):
+		get_tree().quit()
 
 func _on_kick_timer_timeout() -> void:
 	collision_shape_2d.set_deferred("disabled",true)
