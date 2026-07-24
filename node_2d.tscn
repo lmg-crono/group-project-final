@@ -721,6 +721,15 @@ position = Vector2(3.8146973e-06, -0.9999962)
 scale = Vector2(0.4082569, 0.45689654)
 texture = ExtResource("14_gt76g")
 
+[node name="Label" type="Label" parent="." unique_id=97293265]
+offset_left = 669.0
+offset_top = -306.0
+offset_right = 709.0
+offset_bottom = -283.0
+theme_override_colors/font_outline_color = Color(0, 0, 1, 1)
+theme_override_constants/outline_size = 10
+text = "Hit Esc to end game "
+
 [connection signal="body_entered" from="Fall Detector" to="Fall Detector" method="_on_body_entered"]
 [connection signal="body_entered" from="win" to="win" method="_on_body_entered"]
 [connection signal="body_entered" from="Candy/victory" to="Candy/victory" method="_on_body_entered"]
