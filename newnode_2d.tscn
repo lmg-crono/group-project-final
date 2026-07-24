@@ -7,18 +7,25 @@ radius = 26.0
 
 [node name="Node2D" type="Node2D" unique_id=1506112684]
 
-[node name="RigidBody2D2" parent="." unique_id=193630194 instance=ExtResource("1_g80kd")]
-
-[node name="StaticBody2D" type="StaticBody2D" parent="RigidBody2D2" unique_id=1684853032]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D2/StaticBody2D" unique_id=1667632775]
-position = Vector2(-26, 87)
-shape = SubResource("CircleShape2D_yy3is")
-
 [node name="PinJoint2D" type="PinJoint2D" parent="." unique_id=1497461382]
 node_a = NodePath("../RigidBody2D2")
-node_b = NodePath("../RigidBody2D2/StaticBody2D")
-disable_collision = false
+node_b = NodePath("../StaticBody2D")
 angular_limit_enabled = true
 angular_limit_lower = 0.7958701
 angular_limit_upper = 0.8848819
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1684853032]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1667632775]
+position = Vector2(0, 13)
+shape = SubResource("CircleShape2D_yy3is")
+
+[node name="RigidBody2D2" parent="." unique_id=193630194 instance=ExtResource("1_g80kd")]
+
+[node name="CollisionShape2D" parent="RigidBody2D2" index="0" unique_id=725574164]
+position = Vector2(-1.0000038, -185)
+
+[node name="Screenshot20260722105317" parent="RigidBody2D2" index="1" unique_id=750198928]
+position = Vector2(-3, -183)
+
+[editable path="RigidBody2D2"]
