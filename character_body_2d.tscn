@@ -12,7 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://c4vxhnag4cmr2" path="res://4left.png" id="6_qnedo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p316n"]
-size = Vector2(49, 133)
+size = Vector2(49, 115)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1kp85"]
 atlas = ExtResource("3_ghijl")
@@ -55,10 +55,25 @@ animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("4_1kp85")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_1kp85")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_1kp85")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_1kp85")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_1kp85")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_1kp85")
 }],
 "loop": 1,
 "name": &"kicking",
-"speed": 5.0
+"speed": 1.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -96,7 +111,7 @@ script = ExtResource("1_ij6vw")
 scale = Vector2(2.1875, 0.4765625)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1045111342]
-position = Vector2(-3.5, 10.5)
+position = Vector2(-3.5, 12.5)
 shape = SubResource("RectangleShape2D_p316n")
 
 [node name="Icon" type="Sprite2D" parent="." unique_id=726564959]
@@ -106,4 +121,4 @@ position = Vector2(628, 315)
 position = Vector2(1, -7)
 scale = Vector2(0.18421997, 0.30626434)
 sprite_frames = SubResource("SpriteFrames_ckmbq")
-animation = &"idle"
+animation = &"kicking"
