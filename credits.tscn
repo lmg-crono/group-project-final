@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://uqcsbn2a4ipp"]
 
-[ext_resource type="Script" uid="uid://djmmbo7ydqgnd" path="res://button.gd" id="1_c1t8d"]
+[ext_resource type="Script" uid="uid://c3o2b8kl8kkwd" path="res://button.gd" id="1_c1t8d"]
 [ext_resource type="Texture2D" uid="uid://8yh7retj54el" path="res://2.png" id="2_g4wvt"]
 
 [node name="Credits" type="Control" unique_id=578998402]
@@ -51,4 +51,4 @@ texture = ExtResource("2_g4wvt")
 position = Vector2(111, -286)
 texture = ExtResource("2_g4wvt")
 
-[connection signal="pressed" from="MarginContainer/CenterContainer/VBoxContainer/Button" to="MarginContainer/CenterContainer/VBoxContainer/Button" method="_on_pressed"]
+[connection signal="button_down" from="MarginContainer/CenterContainer/VBoxContainer/Button" to="MarginContainer/CenterContainer/VBoxContainer/Button" method="_on_button_down"]
