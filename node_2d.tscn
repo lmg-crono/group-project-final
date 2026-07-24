@@ -24,7 +24,7 @@
 [ext_resource type="PackedScene" uid="uid://dy4hlvu4lw7qg" path="res://area_enemy.tscn" id="20_fs4d3"]
 [ext_resource type="Texture2D" uid="uid://cweoqv6wh77ac" path="res://Candy.png" id="22_ei405"]
 [ext_resource type="Script" uid="uid://5ufp0q3ywxhj" path="res://victory.gd" id="24_2nhjh"]
-[ext_resource type="AudioStream" uid="uid://mv1ux7e20hj6" path="res://newnewnew.wav" id="25_bjha6"]
+[ext_resource type="AudioStream" uid="uid://bmrlk7cl34vhs" path="res://work.wav" id="26_gt76g"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fwou7"]
 size = Vector2(28.068527, 131.16994)
@@ -498,7 +498,6 @@ texture = ExtResource("18_k73cj")
 position = Vector2(11.59082, 4.492676)
 scale = Vector2(1, 0.9999997)
 shape = SubResource("RectangleShape2D_uk73q")
-one_way_collision = true
 
 [node name="Woodplatform13" type="Sprite2D" parent="." unique_id=618486971]
 z_index = 1
@@ -569,12 +568,13 @@ scale = Vector2(1, 0.9999997)
 shape = SubResource("RectangleShape2D_nt8xu")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1572514996]
-stream = ExtResource("25_bjha6")
+stream = ExtResource("26_gt76g")
+volume_db = 7.745
 autoplay = true
 
-[node name="Newnewnew" type="AudioStreamPlayer2D" parent="AudioStreamPlayer2D" unique_id=8193333]
-position = Vector2(-1814, -892)
-stream = ExtResource("25_bjha6")
+[node name="Work" type="AudioStreamPlayer2D" parent="AudioStreamPlayer2D" unique_id=273103947]
+position = Vector2(567, -527)
+stream = ExtResource("26_gt76g")
 
 [node name="StaticBody2D14" type="StaticBody2D" parent="." unique_id=519807263]
 
