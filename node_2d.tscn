@@ -312,7 +312,7 @@ shape = SubResource("RectangleShape2D_0arap")
 [node name="StaticBody2D5" type="StaticBody2D" parent="." unique_id=728103113]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D5" unique_id=945931635]
-position = Vector2(524, -418.00003)
+position = Vector2(524, -423)
 rotation = -0.116937056
 shape = SubResource("RectangleShape2D_gjg0o")
 
@@ -385,9 +385,9 @@ position = Vector2(0, 165.65625)
 shape = SubResource("RectangleShape2D_8cre8")
 
 [node name="Screenshot20260722105346" type="Sprite2D" parent="." unique_id=1101459331]
-position = Vector2(-479, -749.00006)
+position = Vector2(-475.8954, -749.00006)
 rotation = 1.5707964
-scale = Vector2(2.429061, 10.050709)
+scale = Vector2(2.429061, 10.127364)
 texture = ExtResource("4_0h7mo")
 
 [node name="Background void" type="Sprite2D" parent="." unique_id=603306445]
@@ -518,10 +518,15 @@ position = Vector2(725, -17)
 rotation = 0.6382086
 scale = Vector2(-0.06475452, -1.3146749)
 
+[node name="Woodplatform13" parent="." unique_id=1732429541 instance=ExtResource("19_7vxoj")]
+position = Vector2(535.1839, -426.11682)
+rotation = 1.4381514
+scale = Vector2(-0.050741315, -5.3090386)
+
 [node name="StaticBody2D12" type="StaticBody2D" parent="." unique_id=1912937763]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D12" unique_id=279454548]
-position = Vector2(731, -28.999966)
+position = Vector2(555, -89)
 rotation = 2.2036548
 scale = Vector2(0.99999994, 0.99999994)
 shape = SubResource("RectangleShape2D_0hfnm")
@@ -552,6 +557,11 @@ stream = ExtResource("25_bjha6")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D14" unique_id=516582938]
 position = Vector2(-27.5, -543.5)
 shape = SubResource("RectangleShape2D_1yvjy")
+
+[node name="Screenshot20260722105347" type="Sprite2D" parent="." unique_id=43131222]
+position = Vector2(133.99976, -604.375)
+scale = Vector2(2.3444445, 0.9722222)
+texture = ExtResource("4_0h7mo")
 
 [connection signal="body_entered" from="Fall Detector" to="Fall Detector" method="_on_body_entered"]
 [connection signal="body_entered" from="win" to="win" method="_on_body_entered"]
