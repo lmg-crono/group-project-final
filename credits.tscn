@@ -27,7 +27,7 @@ layout_mode = 2
 
 [node name="Label" type="Label" parent="MarginContainer/CenterContainer/VBoxContainer" unique_id=896936334]
 layout_mode = 2
-text = "Thanks for playing
+text = "           You died
 Game by Ezra and Nick"
 
 [node name="Button" type="Button" parent="MarginContainer/CenterContainer/VBoxContainer" unique_id=1162141635]

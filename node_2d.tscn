@@ -23,6 +23,7 @@
 [ext_resource type="PackedScene" uid="uid://bg2ciqpmltnwy" path="res://woodplatform_5.tscn" id="19_7vxoj"]
 [ext_resource type="PackedScene" uid="uid://dy4hlvu4lw7qg" path="res://area_enemy.tscn" id="20_fs4d3"]
 [ext_resource type="Texture2D" uid="uid://cweoqv6wh77ac" path="res://Candy.png" id="22_ei405"]
+[ext_resource type="Script" uid="uid://5ufp0q3ywxhj" path="res://victory.gd" id="24_2nhjh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fwou7"]
 size = Vector2(28.068527, 131.16994)
@@ -77,6 +78,9 @@ size = Vector2(1898.5, 137)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0hfnm"]
 size = Vector2(214.59578, 25.82904)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nt8xu"]
+size = Vector2(508.39648, 736.7969)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1yvjy"]
 size = Vector2(75, 11)
@@ -195,7 +199,7 @@ shape = SubResource("RectangleShape2D_boomn")
 
 [node name="Physics Enemy" parent="." unique_id=1685907076 instance=ExtResource("6_flf07")]
 z_index = 2
-position = Vector2(1776, -707)
+position = Vector2(1827, -454)
 speed = 3
 
 [node name="Physics Enemy2" parent="." unique_id=1684337806 instance=ExtResource("6_flf07")]
@@ -218,7 +222,6 @@ shape = SubResource("RectangleShape2D_c3dyn")
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=541564298]
 
 [node name="Control" type="Control" parent="CanvasLayer" unique_id=1942786605]
-visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -313,7 +316,7 @@ rotation = -0.116937056
 shape = SubResource("RectangleShape2D_gjg0o")
 
 [node name="Pivot box" parent="." unique_id=1506112684 instance=ExtResource("13_7vxoj")]
-position = Vector2(112, -128)
+position = Vector2(101, -107)
 
 [node name="StaticBody2D6" type="StaticBody2D" parent="." unique_id=255279753]
 
@@ -527,6 +530,14 @@ position = Vector2(2672, -718)
 scale = Vector2(0.24980474, 0.23344289)
 texture = ExtResource("22_ei405")
 
+[node name="victory" type="Area2D" parent="Candy" unique_id=1379697097]
+script = ExtResource("24_2nhjh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Candy/victory" unique_id=541183407]
+position = Vector2(34.026367, -4.2836914)
+scale = Vector2(1, 0.9999997)
+shape = SubResource("RectangleShape2D_nt8xu")
+
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1572514996]
 
 [node name="StaticBody2D14" type="StaticBody2D" parent="." unique_id=519807263]
@@ -537,3 +548,4 @@ shape = SubResource("RectangleShape2D_1yvjy")
 
 [connection signal="body_entered" from="Fall Detector" to="Fall Detector" method="_on_body_entered"]
 [connection signal="body_entered" from="win" to="win" method="_on_body_entered"]
+[connection signal="body_entered" from="Candy/victory" to="Candy/victory" method="_on_body_entered"]
