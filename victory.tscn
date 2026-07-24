@@ -59,4 +59,5 @@ texture = ExtResource("2_qr7ta")
 position = Vector2(111, -286)
 texture = ExtResource("2_qr7ta")
 
+[connection signal="button_down" from="Control/MarginContainer/CenterContainer/VBoxContainer/Button2" to="Control/MarginContainer/CenterContainer/VBoxContainer/Button2" method="_on_button_down"]
 [connection signal="pressed" from="Control/MarginContainer/CenterContainer/VBoxContainer/Button2" to="Control/MarginContainer/CenterContainer/VBoxContainer/Button2" method="_on_pressed"]
